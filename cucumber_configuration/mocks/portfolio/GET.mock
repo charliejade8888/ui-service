@@ -1,0 +1,41 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+[
+  {
+    "dateTime": "2017-01-27T07:09:51.863",
+    "ticker": "AAPL",
+    "numOfSharesToBuy": 7,
+    "numOfSharesHeld": 7,
+    "sharesHeldValue": 700,
+    "cashHeldValue": 300,
+    "accountValue": 1000,
+    "price": 100,
+    "buyAdvice": 700,
+    "maxMonthlyInvestment": 1000
+  },
+  {
+    "dateTime": "2017-01-27T07:11:02.381",
+    "ticker": "IBM",
+    "numOfSharesToBuy": 93,
+    "numOfSharesHeld": 100,
+    "sharesHeldValue": 42922,
+    "cashHeldValue": 600,
+    "accountValue": 43522,
+    "price": 454,
+    "buyAdvice": 42222,
+    "maxMonthlyInvestment": 1000
+  },
+  {
+    "dateTime": "2017-01-27T07:12:08.646",
+    "ticker": "INTC",
+    "numOfSharesToBuy": 97,
+    "numOfSharesHeld": 193,
+    "sharesHeldValue": 85144,
+    "cashHeldValue": -40622,
+    "accountValue": 44522,
+    "price": 454,
+    "buyAdvice": 42222,
+    "maxMonthlyInvestment": 1000
+  }
+]

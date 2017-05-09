@@ -1,0 +1,15 @@
+<form ng-submit="ctrl.submit()">
+    <div class="form-group">
+        <label for="maxMonthlyInvestment">max investment</label>
+        <input type="text" class="form-control" id="maxMonthlyInvestment" placeholder="max investment"  ng-model="ctrl.maxMonthlyInvestment">
+    </div>
+    <div class="form-group">
+        <label for="ticker">ticker</label>
+        <input type="text" class="form-control" id="ticker" placeholder="ticker" ng-model="ctrl.ticker">
+    </div>
+    <div class="form-group">
+        <label for="price">price</label>
+        <input type="text" class="form-control" id="price" placeholder="price" ng-model="ctrl.price">
+    </div>
+    <input type="submit" value={{button}} id="submitTrade">
+</form>

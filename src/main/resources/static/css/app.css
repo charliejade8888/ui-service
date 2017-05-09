@@ -1,0 +1,120 @@
+#title {
+    margin-left:70px;
+}
+
+/* trade form is fixed item */
+.fixed {
+    float:left;
+    width: 125px;
+    margin-left: 50px;
+}
+
+/* grid is flex item */
+.flex-item {
+    float: left;
+    width: 1270px; /*must match combined widths in gridOptions columnDefs config in grid directive + offset of 20px*/
+}
+
+.ui-grid.ng-isolate-scope {
+    border: 0;
+}
+
+.flex-box {
+    margin-left:70px;
+    display: flex;
+}
+
+.my-grid {
+    height: 260px;
+}
+
+ui-grid-row, .ui-grid-cell {
+    height: 50px !important;
+}
+
+.ui-grid-cell {
+    border: 0 !important;
+}
+
+.ui-grid-icon-cancel {
+    display: none !important;
+}
+
+.ui-grid-header-cell {
+    border: 0 !important;
+}
+
+.ui-grid-column-menu-button:focus {
+    outline: none !important;
+}
+
+.ui-grid-cell-contents:focus {
+    background: transparent !important;
+    outline: none !important;
+}
+
+/* //TODO holy crap! thats a lot of !importants!!*/
+/* //TODO format date/time */
+
+.ui-grid-filter-input {
+    border: 2px solid #dadada !important;
+    border-radius: 4px !important;
+}
+
+.ui-grid-filter-container {
+    padding-left: 2px !important;
+    padding-right: 15px !important;
+}
+
+/* twitter animated glow on filter input box */
+.ui-grid-filter-input:focus {
+    outline: none !important;
+    border-color: #9ecaed !important;
+    box-shadow: 0 0 5px #9ecaed !important;
+    -webkit-transition: border 0.2s linear, box-shadow 0.2s linear;
+    -moz-transition: border 0.2s linear, box-shadow 0.2s linear;
+    transition: border 0.2s linear, box-shadow 0.2s linear;
+}
+
+/* triangle element */
+.ui-grid-menu-button {
+    background: none !important;
+    width: 0 !important;
+    border-bottom: 40px solid rgba(0,0,0, 0.0001) !important;
+    border-left: 0 !important;
+    border-right: 50px solid rgb(222, 229, 233) !important;
+}
+
+/* move hamburger icon over triangle */
+.ui-grid-icon-menu {
+    margin-left: 25px !important;
+}
+
+/* positioning of grid menu invoked by triangle button */
+.ui-grid-menu-button .ui-grid-menu {
+    margin-top: -20px !important;
+    margin-right: -30px !important;
+}
+
+.ui-grid-menu-mid {
+    overflow-y:hidden !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ui-grid-menu-inner {
+    height:200px;
+    width:auto;
+    overflow-y:scroll;
+}
+
+/*sort direction icons */
+.ui-grid-icon-up-dir, .ui-grid-icon-down-dir {
+    display: none;
+}
+
+#plotly {
+    /*float: left;*/
+    width: 80%; /*//TODO make same as grid */
+    height: 360px;
+}
+/*//TODO add spacer to bottom to make grid look better..sort out grid menu!! stop scroll OR make column menus scroll option is best!

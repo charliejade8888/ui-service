@@ -1,0 +1,71 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+    }
+}
+
+plugins {
+    id "com.moowork.node" version "1.0.1"
+    id "com.moowork.grunt" version "1.0.1"
+    id "com.moowork.gulp" version "1.0.1"
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+project.ext {
+    junitVersion = '4.12'
+}
+
+jar {
+    baseName = 'ui-service'
+    version = '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+tasks.withType(JavaCompile) {
+    options.warnings = false
+}
+
+task showMeCache << {
+    configurations.compile.each { println it }
+}
+
+task karma(type: Exec) {
+    commandLine './node_modules/karma/bin/karma', 'start'
+}
+
+task cucumber(type: Exec) {
+    commandLine './cucumber.sh'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.1'
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.webjars.bower/angular-smart-table
+    compile group: 'org.webjars.bower', name: 'angular-smart-table', version: '2.1.8'
+
+// https://mvnrepository.com/artifact/org.webjars.bower/angular-ui-grid
+    compile group: 'org.webjars.bower', name: 'angular-ui-grid', version: '4.0.2'
+    compile group: 'org.webjars.bower', name: 'plotly.js', version: '1.24.1'
+    compile("org.springframework.boot:spring-boot-devtools")
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '1.4.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.4.3.RELEASE'
+    compile group: 'org.webjars', name: 'angularjs', version: '1.4.9'
+    compile group: 'org.webjars', name: 'bootstrap', version: '3.3.6'
+	compile group: 'org.webjars.bower', name: 'jquery', version: '3.1.1'
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    testCompile 'junit:junit:4.12'
+}
